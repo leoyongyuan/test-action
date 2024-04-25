@@ -9,7 +9,7 @@
 ARG NODE_VERSION=16.20.2
 
 FROM node:${NODE_VERSION}-alpine as base
-WORKDIR /usr/src/app
+WORKDIR /usr/app
 EXPOSE 3000
 
 FROM base as dev
