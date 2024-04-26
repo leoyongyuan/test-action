@@ -53,6 +53,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
+
 # 阶段二：生产镜像
 FROM node:${NODE_VERSION}-alpine as prod
 WORKDIR /usr/app
