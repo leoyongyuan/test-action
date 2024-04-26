@@ -27,7 +27,7 @@ RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=cache,target=/root/.npm \
     npm ci --omit=dev
 USER node
-COPY --from=base /usr/src/app/dist ./dist
+COPY --from=base /usr/src/app/build ./build
 CMD node src/index.js
 
 FROM base as test
